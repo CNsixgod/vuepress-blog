@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "vuepress dev docs",
+    "start": "vuepress dev docs --temp .temp",
     "build": "vuepress build docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,7 +16,16 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@vuepress/plugin-active-header-links": "^1.9.7",
+    "@vuepress/plugin-back-to-top": "^1.9.7",
+    "@vuepress/plugin-nprogress": "^1.9.7",
+    "directory-tree": "^2.2.7",
     "vuepress": "^1.9.7",
+    "vuepress-plugin-cursor-effects": "^1.1.2",
+    "vuepress-plugin-nuggets-style-copy": "^1.0.3",
+    "vuepress-plugin-reading-progress": "^1.0.10",
+    "vuepress-plugin-right-anchor": "^0.5.5",
+    "vuepress-plugin-shortlink": "^1.1.0",
     "vuepress-theme-reco": "^1.6.11"
   }
 }

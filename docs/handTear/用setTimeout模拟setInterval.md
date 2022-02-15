@@ -1,10 +1,12 @@
 ---
 title: 用setTimeout模拟setInterval
 abbrlink: a72be1b3
-date: 2021-02-12 02:19:28
+date: 2021-02-12T02:19:28.000Z
 categories:
-  - [javascript, handTear]
+  - - javascript
+    - handTear
 tag: handTear
+permalink: /handTear/9d814c91/
 ---
 
 ```javascript
