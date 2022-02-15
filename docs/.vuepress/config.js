@@ -2,7 +2,7 @@ module.exports = {
   title: "john-jojo",
   description: "john's blog",
   theme: "reco",
-  base: "/ vuepress-blog/",
+  base: "/vuepress-blog/",
   locales: {
     "/": {
       lang: "zh-CN",
