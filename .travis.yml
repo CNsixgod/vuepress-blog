@@ -1,0 +1,19 @@
+sudo: false
+language: node_js
+node_js:
+  - 12
+cache: npm
+branches:
+  only:
+    - master # build master branch only
+script:
+  - npm run build
+deploy:
+  provider: pages
+  skip-cleanup: true
+  local_dir: docs/.vuepress/dist
+  github-token: $GH_TOKEN
+  target-branch: gh-pages
+  keep-history: true
+  on:
+    branch: master
