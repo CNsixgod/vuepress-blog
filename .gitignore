@@ -1,0 +1,10 @@
+*.log
+.DS_Store
+node_modules
+.cache
+dist
+coverage
+**/config/local.json
+openapitools.json
+spec.json
+example/generated
