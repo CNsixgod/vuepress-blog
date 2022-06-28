@@ -32,9 +32,11 @@ function toSidebarOption(tree = []) {
 function autoGetSidebarOptionBySrcDir(srcPath = SRC_PATH) {
   const srcDir = dirTree(srcPath, {
     extensions: /\.md$/,
+    exclude: [/static\/*/],
     normalizePath: true,
   });
   const ress = toSidebarOption(srcDir.children);
+  console.log(ress)
   return toSidebarOption(srcDir.children);
   // [title:'group-name', children:['/route-a','route-b']]
 }

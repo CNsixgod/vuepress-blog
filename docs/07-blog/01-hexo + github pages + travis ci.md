@@ -1,16 +1,15 @@
 ---
 title: hexo + github pages + travis ci
-abbrlink: '0'
-date: 2020-01-01T16:42:01.000Z
-tag: hexo
-categories:
-  - - blog
+date: 2010-11-01
+tags:
+  - Promise
+  - JavaScript
 permalink: /blog/3c76f0a7/
 ---
 
 ## 本地安装 `hexo`
 
-> 本地需要有node环境 [here](https://nodejs.org/zh-cn/download/)
+> 本地需要有 node 环境 [here](https://nodejs.org/zh-cn/download/)
 
 ```javascript
 npm i hexo -g
@@ -39,9 +38,7 @@ look at `http://localhost:4000`
 
 ## github pages
 
-> 需要一个github账号，然后添加ssh （不懂可以google）
-
-
+> 需要一个 github 账号，然后添加 ssh （不懂可以 google）
 
 新建`repo`, 仓库名为`name.github.io`
 
@@ -49,19 +46,18 @@ look at `http://localhost:4000`
 
 ![image-20211117230332726](./static/01/image-20211117230332726.png)
 
-1. 初始化 git， 进入刚创建的hexo项目目录 与远端仓库建立连接（或者`git clone`下来`repo` 然后直接重新创建一个新的hexo）
+1. 初始化 git， 进入刚创建的 hexo 项目目录 与远端仓库建立连接（或者`git clone`下来`repo` 然后直接重新创建一个新的 hexo）
 2. 然后创建一个新的本地分支 `gh-pages`，并关联远程分支（一定要是**gh-pages** ）
 3. 开启 github pages， 选择 `gh-pages`分支
 
 ![image-20211117231931698](./static/01/image-20211117231931698.png)
 
-4. 修改hexo配置文件（`_config.yml`）
+4. 修改 hexo 配置文件（`_config.yml`）
 
 ```js
-deploy:
-  type: git
-  repo:  https://github.com/xxxx.git
-  branch: master
+deploy: type: git;
+//github.com/xxxx.git
+repo: https: branch: master;
 ```
 
 5. 安装`hexo-deployer-git`
@@ -76,18 +72,18 @@ hexo deploy    /上传
 
 打开网址就可以看到博客了`https://用户名.github.io/项目名/`
 
-##  travis ci
+## travis ci
 
 > “工程化” "自动化" 是你必经之路，懒惰=进步
 
 我们只需要将本地修改的文件推送到 `github` 仓库，就会触发 `travis ci` 的自动部署
 
-1. 把*_config.yml*文件里的*repo*信息注释一下，不需要在配置文件里指定仓库地址，`travis ci` 会直接在其监听项目上进行部署。
+1. 把*\_config.yml*文件里的*repo*信息注释一下，不需要在配置文件里指定仓库地址，`travis ci` 会直接在其监听项目上进行部署。
 
 ```yml
 deploy:
-  type: 'git'
-#  repo: git@github.com:MFrank2016/breeze-blog
+  type: "git"
+  #  repo: git@github.com:MFrank2016/breeze-blog
   branch: gh-pages
 ```
 
@@ -115,13 +111,12 @@ deploy:
   local-dir: public
 ```
 
-[travi ci](https://app.travis-ci.com) github 登陆 关联开启相关repo
+[travi ci](https://app.travis-ci.com) github 登陆 关联开启相关 repo
 
-设置travi ci 环境变量 key为GH_TOKEN  value为github 的 access token
+设置 travi ci 环境变量 key 为 GH_TOKEN value 为 github 的 access token
 
-这部分不懂的可以google一下
+这部分不懂的可以 google 一下
 
 ## ending
 
 ok! finish
-

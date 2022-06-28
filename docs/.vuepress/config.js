@@ -1,5 +1,20 @@
 const autoGetSidebarOptionBySrcDir = require("./vendor/sidebar-auto");
+const { sideBarTool } = require("./vendor/test");
 const path = require("path");
+
+// 需要排除的一些目录
+let unDirIncludes = [".vuepress", "static"];
+// 只需要处理后缀的文件类型
+let SuffixIncludes = ["md", "html"];
+//使用方法生生成侧边栏
+// 侧边栏
+let sidebar = sideBarTool.genSideBarGroup(
+  path.resolve(__dirname, "../"),
+  unDirIncludes,
+  SuffixIncludes,
+  {}
+);
+
 module.exports = {
   title: "学而不思则黄",
   description: "john's blog",
@@ -10,37 +25,31 @@ module.exports = {
       lang: "zh-CN",
     },
   },
+  head: [
+    [
+      "meta",
+      {
+        name: "viewport",
+        content: "width=device-width,initial-scale=1,user-scalable=no",
+      },
+    ],
+  ],
   themeConfig: {
     nav: [
       { text: "首页", link: "/" },
-      //   {
-      //     text: "xxxxx",
-      //     items: [
-      //       { text: "Github", link: "" },
-      //     ],
-      //   },
+      { text: "TimeLine", link: "/timeline/", icon: "reco-date" },
     ],
-    sidebar: [
-      { title: "Fighting!", path: "/home" },
-      {
-        title: "handTear",
-        children: autoGetSidebarOptionBySrcDir(
-          path.resolve(__dirname, "../handTear")
-        ),
+    sidebar,
+    blogConfig: {
+      category: {
+        location: 2, // 在导航栏菜单中所占的位置，默认2
+        text: "Category", // 默认文案 “分类”
       },
-      {
-        title: "blog",
-        children: autoGetSidebarOptionBySrcDir(
-          path.resolve(__dirname, "../blog")
-        ),
+      tag: {
+        location: 3, // 在导航栏菜单中所占的位置，默认3
+        text: "Tag", // 默认文案 “标签”
       },
-      {
-        title: "linux",
-        children: autoGetSidebarOptionBySrcDir(
-          path.resolve(__dirname, "../linux")
-        ),
-      },
-    ],
+    },
   },
   plugins: [
     [
@@ -52,23 +61,6 @@ module.exports = {
         },
       },
     ],
-    [
-      "dynamic-title",
-      {
-        showIcon: "https://sixgod.cool/avatar.jpg",
-        showText: "客官欢迎回来~",
-        hideIcon: "https://sixgod.cool/avatar.jpg",
-        hideText: "客官不要走嘛~",
-        recoverTime: 2000,
-      },
-    ],
-    [
-      "@vuepress/active-header-links",
-      {
-        sidebarLinkSelector: ".sidebar-link",
-        headerAnchorSelector: ".header-anchor",
-      },
-    ],
     "@vuepress/back-to-top",
     "@vuepress/nprogress",
     "reading-progress",
@@ -78,13 +70,20 @@ module.exports = {
         normalSuffix: "/",
         indexSuffix: "/",
         notFoundPath: "/404.html",
-        containDirs: ["/blog", "/handTear", "/linux"],
+        containDirs: [
+          "/blog",
+          "/handTear",
+          "/linux",
+          "/draft",
+          "/electron",
+          "/react",
+        ],
       },
     ],
     [
       "vuepress-plugin-right-anchor",
       {
-        showDepth: 1,
+        showDepth: 3,
         ignore: [
           "/",
           "/api/",
@@ -94,7 +93,6 @@ module.exports = {
           trigger: "hover",
           clickModeDefaultOpen: true,
         },
-        customClass: "your-customClass",
         disableGlobalUI: false,
       },
     ],
