@@ -1,11 +1,4 @@
-*.log
-.DS_Store
+.vuepress/.cache
+.vuepress/.temp
+.vuepress/dist
 node_modules
-.cache
-dist
-coverage
-**/config/local.json
-openapitools.json
-spec.json
-example/generated
-.temp

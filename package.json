@@ -1,30 +1,20 @@
 {
   "name": "vuepress-blog",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "vuepress dev docs --temp .temp",
-    "start:dev": "vuepress dev docs",
-    "build": "vuepress build docs",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "version": "2.0.0",
+  "description": "website for johnHuang's vuepress blog",
   "repository": {
     "type": "git",
     "url": "github-personal:CNsixgod/vuepress-blog.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^1.9.7",
-    "@vuepress/plugin-nprogress": "^1.9.7",
-    "directory-tree": "^2.2.7",
-    "vuepress": "^1.9.7",
-    "vuepress-plugin-nuggets-style-copy": "^1.0.3",
-    "vuepress-plugin-reading-progress": "^1.0.10",
-    "vuepress-plugin-right-anchor": "^0.5.5",
-    "vuepress-plugin-shortlink": "^1.1.0",
-    "vuepress-theme-reco": "^1.6.11"
+  "author": "johnHuang <johnHuang@xm.wonder.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev .",
+    "start": "vuepress dev .",
+    "build": "vuepress build ."
+  },
+  "dependencies": {
+    "vuepress": "2.0.0-beta.48",
+    "vuepress-theme-reco": "2.0.0-beta.23"
   }
 }

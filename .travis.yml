@@ -11,7 +11,7 @@ script:
 deploy:
   provider: pages
   skip-cleanup: true
-  local_dir: docs/.vuepress/dist
+  local_dir: .vuepress/dist
   github-token: $GH_TOKEN
   target-branch: gh-pages
   keep-history: true
