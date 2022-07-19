@@ -9,6 +9,7 @@ const sidebars = genSideBar(path.resolve(__dirname, "../docs"));
 export default defineUserConfig({
   title: "大尾鲈鳗",
   description: "学而不思则黄，思而不学则黄",
+  base: "/vuepress-blog/",
   theme: recoTheme({
     style: "@vuepress-reco/style-default",
     logo: "/logo.png",
