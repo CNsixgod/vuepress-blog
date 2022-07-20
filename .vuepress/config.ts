@@ -33,6 +33,10 @@ export default defineUserConfig({
           { text: "后端", link: "/docs/back-end/7cbf7510" },
         ],
       },
+      {
+        text: "数据结构",
+        link: "/docs/datastructures-algorithms/7093c74c",
+      },
     ],
   }),
   plugins: [
