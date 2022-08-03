@@ -1,1 +1,0 @@
-const t=JSON.parse('{"key":"v-78aa1111","path":"/tags/linux%20ssh/1/","title":"","lang":"en-US","frontmatter":{"layout":"Categories"},"excerpt":"","headers":[],"git":{},"filePathRelative":null}');export{t as data};
