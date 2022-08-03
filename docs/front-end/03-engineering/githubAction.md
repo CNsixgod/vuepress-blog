@@ -2,9 +2,9 @@
 title: githubAction
 date: 2022/2/13
 tags:
-  - CI/CD
+  - CiCd
 categories:
-  - github
+  - 前端工程化
 permalink: /docs/front-end/699317ca.html
 ---
 
@@ -60,8 +60,6 @@ chomd u-w /etc/sudoers
 
 然后使用work登录， 输入su 再输入root账号的密码  就拥有超级权限
 
-
-
 #### 免密码登录
 
 1. 登录主机  创建~/.ssh/authorized_keys
@@ -79,8 +77,6 @@ yum -y install git
 ```
 
 docker, docker-compose
-
-
 
 ```yaml
 name: deploy for dev
@@ -128,12 +124,3 @@ jobs:
             - name: delete ssh key # 删除 ssh key
               run: rm -rf ~/.ssh/id_rsa
 ```
-
-
-
-
-
-
-
-
-

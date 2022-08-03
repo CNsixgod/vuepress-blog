@@ -3,9 +3,6 @@ title: linux配置环境变量
 date: 2022/7/13
 categories:
   - linux
-tags:
-  - linux
-  - environment
 permalink: /docs/back-end/1fcf987c.html
 ---
 

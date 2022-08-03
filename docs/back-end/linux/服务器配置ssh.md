@@ -3,8 +3,6 @@ title: 服务器配置ssh
 date: 2022/7/13
 categories:
   - linux
-tags:
-  - linux ssh
 permalink: /docs/back-end/7cbf7510.html
 ---
 

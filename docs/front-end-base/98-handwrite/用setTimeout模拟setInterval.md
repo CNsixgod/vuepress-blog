@@ -1,9 +1,7 @@
 ---
 title: 用setTimeout模拟setInterval
-tags:
-  - handwrite
 categories:
-  - javascript
+  - 手撕
 date: 2020/7/13
 permalink: /docs/front-end-base/515c8ab1.html
 ---

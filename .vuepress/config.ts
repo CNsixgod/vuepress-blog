@@ -18,7 +18,8 @@ export default defineUserConfig({
     docsBranch: "main",
     docsDir: "example",
     lastUpdatedText: "",
-
+    lastUpdated: false,
+    editLink: false,
     backToTop: true,
     nprogress: true,
     activeHeaderLinks: true,
@@ -35,7 +36,12 @@ export default defineUserConfig({
       },
       {
         text: "数据结构",
-        link: "/docs/datastructures-algorithms/7093c74c",
+        children: [
+          {
+            text: "数据结构",
+            link: "/docs/datastructures-algorithms/7093c74c",
+          },
+        ],
       },
     ],
   }),
@@ -71,10 +77,9 @@ export default defineUserConfig({
           fixturesPermalink = compatiblePath(
             path.join(newFilePath.join("/"), fixturesPermalink)
           );
-          console.log(fixturesPermalink);
         }
 
-        frontmatter.title = slug;
+        frontmatter.title = slug?.replace(/^[0-9]+-/g, "");
         frontmatter.date = new Date().toLocaleDateString();
         frontmatter.permalink = `/${fixturesPermalink}.html`;
         let newContent = matter.stringify(content, frontmatter);

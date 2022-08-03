@@ -1,11 +1,8 @@
 ---
 title: linux安装node
 date: 2022/7/13
-tags:
-  - linux
-  - node
 categories:
-  - linux installation
+  - linux
 permalink: /docs/back-end/2fac4da8.html
 ---
 
@@ -21,4 +18,3 @@ ln -s /usr/local/src/nodejs/bin/node /usr/local/bin/
 # .bashrc
 export PATH=/usr/local/src/nodejs/bin:$PATH
 ```
-

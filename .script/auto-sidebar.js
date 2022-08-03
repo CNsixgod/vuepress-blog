@@ -41,7 +41,6 @@ const genSideBar = (RootPath) => {
           fs.readFileSync(fixturesPath)
         ).data?.permalink?.replace(".html", "");
         // if (!permalink) return;
-
         const titleName = parentKey.split("/").pop();
         const parentKeySplit = parentKey.split("/");
         parentKeySplit.pop();

@@ -3,7 +3,7 @@ title: sso
 tags:
   - sso
 categories:
-  - login
+  - 前端工程化
 date: 2022/4/22
 permalink: /docs/front-end/48e3fa2f.html
 ---

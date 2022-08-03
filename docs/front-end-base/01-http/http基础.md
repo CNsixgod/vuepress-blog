@@ -1,10 +1,8 @@
 ---
 title: http基础
 date: 2021/4/20
-tags:
-  - maidianjiankong
 categories:
-  - javascript
+  - http
 permalink: /docs/front-end-base/7d5ea1ff.html
 ---
 

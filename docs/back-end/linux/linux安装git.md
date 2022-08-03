@@ -1,11 +1,9 @@
 ---
 title: linux安装git
 date: 2022/7/13
-tags:
-  - linux
 categories:
   - linux
-  - installation
+
 permalink: /docs/back-end/76ab7892.html
 ---
 
