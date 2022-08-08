@@ -1,0 +1,19 @@
+import{_ as n,o as s,c as a,a as e}from"./app.bd40bae0.js";const p={},t=e(`<h2 id="\u4E8C\u5206\u641C\u7D22" tabindex="-1"><a class="header-anchor" href="#\u4E8C\u5206\u641C\u7D22" aria-hidden="true">#</a> \u4E8C\u5206\u641C\u7D22</h2><div class="language-javascript ext-js line-numbers-mode"><pre class="language-javascript"><code>Array<span class="token punctuation">.</span>protortype<span class="token punctuation">.</span><span class="token function-variable function">quickSort</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">const</span> low <span class="token operator">=</span> <span class="token number">0</span>
+  <span class="token keyword">const</span> high <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span>
+  
+  <span class="token keyword">while</span><span class="token punctuation">(</span>low <span class="token operator">&lt;</span> high<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> mid <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token punctuation">(</span>low <span class="token operator">+</span> high<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> ele <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">[</span>mid<span class="token punctuation">]</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>ele <span class="token operator">&lt;</span> item<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      low <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>ele <span class="token operator">&gt;</span> item<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      high <span class="token operator">=</span> mid <span class="token operator">-</span> <span class="token number">1</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> mid
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span>
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,2),o=[t];function c(l,i){return s(),a("div",null,o)}var u=n(p,[["render",c],["__file","93536ec4.html.vue"]]);export{u as default};
